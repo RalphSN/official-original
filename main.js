@@ -6,9 +6,10 @@ window.onload = function () {
     const closeButton = document.querySelector(".close-menu");
 
     if (menuButton && menu && overlay && closeButton) {
-        menuButton.addEventListener("click", function () {
+        menuButton.addEventListener("click", function (event) {
             menu.classList.add("open");
             overlay.classList.add("open");
+            event.stopPropagation(); // 防止點擊觸發關閉
         });
 
         closeButton.addEventListener("click", function () {
@@ -19,6 +20,14 @@ window.onload = function () {
         overlay.addEventListener("click", function () {
             menu.classList.remove("open");
             overlay.classList.remove("open");
+        });
+
+        // 點擊其他區域關閉 `.navbar-auth-slide`
+        document.addEventListener("click", function (event) {
+            if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+                menu.classList.remove("open");
+                overlay.classList.remove("open");
+            }
         });
     }
 
