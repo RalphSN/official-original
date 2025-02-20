@@ -978,19 +978,19 @@ button {
 }
 
 .load :first-child {
-  background: #19a68c;
+  background: #00a396;
   animation-delay: -1.5s;
 }
 .load :nth-child(2) {
-  background: #f63d3a;
+  background: #aa212b;
   animation-delay: -1s;
 }
 .load :nth-child(3) {
-  background: #fda543;
+  background: #ffc100;
   animation-delay: -0.5s;
 }
 .load :last-child {
-  background: #193b48;
+  background: #3864A0;
 }
 
 @keyframes spin {
