@@ -1,6 +1,7 @@
 window.onload = function () {
   const preloader = document.querySelector(".preloader");
   const allElements = document.querySelectorAll(".navbar, .footer, .main");
+  const coverImg = document.querySelector(".cover .cover-image-container img");
   // **🔹 漢堡選單功能**
   const menuButton = document.querySelector(".hamburger-menu");
   const menu = document.querySelector(".navbar-auth-slide");
@@ -44,6 +45,7 @@ window.onload = function () {
         el.style.display = "flex";
       },500);
     });
+    coverImg.style.display = "block";
   }, 1500);
 
   //攔截a不改變網址
