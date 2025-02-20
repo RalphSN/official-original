@@ -1,10 +1,19 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url('fonts/NotoSansTC-VariableFont_wght.ttf') format('truetype'); 
+  font-weight: 100 900; /* 一次引入所有字重 */
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   user-select: none;
 }
+
+
 html,
 body {
   width: 100%;
@@ -1009,6 +1018,12 @@ button {
   }
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
 .main, .navbar, .footer {
-  visibility: hidden;
+  display: none;
+  opacity: 0;
 }

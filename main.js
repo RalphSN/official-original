@@ -11,8 +11,15 @@ window.onload = function () {
   const scrollbarWidth =
     window.innerWidth - document.documentElement.clientWidth;
 
+  // **🔹 禁用滾動位置記憶，確保重新整理回到頂部**
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
   // **🔹 強制滾動到頂部，確保 preloader 可見**
-  window.scrollTo(0, 0);
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 0);
 
   // preloader (因網站規模小，僅用2秒模擬載入)
   document.body.style.overflow = "hidden";
@@ -27,7 +34,9 @@ window.onload = function () {
     document.body.style.overflow = "";
     document.body.style.paddingRight = "";
     allElements.forEach((el) => {
-      el.style.visibility = "visible";
+      el.style.display = "flex";
+      el.style.opacity = "1";
+      el.style.transition = "opacity 0.5s ease";
     });
     fixedElements.forEach((el) => {
       el.style.paddingRight = "";
