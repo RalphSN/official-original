@@ -39,6 +39,11 @@ window.onload = function () {
     fixedElements.forEach((el) => {
       el.style.paddingRight = "";
     });
+    setTimeout(()=>{
+      allElements.forEach((el) => {
+        el.style.display = "flex";
+      },500);
+    });
   }, 1500);
 
   //攔截a不改變網址

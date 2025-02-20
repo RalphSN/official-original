@@ -1024,6 +1024,7 @@ button {
 }
 
 .main, .navbar, .footer {
+  display: none;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s; 
