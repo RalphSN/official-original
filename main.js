@@ -35,15 +35,15 @@ window.onload = function () {
     document.body.style.overflow = "";
     document.body.style.paddingRight = "";
     allElements.forEach((el) => {
-      el.classList.add("loaded")
+      el.classList.add("loaded");
     });
     fixedElements.forEach((el) => {
       el.style.paddingRight = "";
     });
-    setTimeout(()=>{
+    setTimeout(() => {
       allElements.forEach((el) => {
         el.style.display = "flex";
-      },500);
+      }, 500);
     });
     coverImg.style.display = "block";
   }, 1500);
