@@ -11,6 +11,9 @@ window.onload = function () {
   const scrollbarWidth =
     window.innerWidth - document.documentElement.clientWidth;
 
+  // **🔹 強制滾動到頂部，確保 preloader 可見**
+  window.scrollTo(0, 0);
+
   // preloader (因網站規模小，僅用2秒模擬載入)
   document.body.style.overflow = "hidden";
   document.body.style.paddingRight = `${scrollbarWidth}px`; // 避免頁面跳動
@@ -24,7 +27,7 @@ window.onload = function () {
     document.body.style.overflow = "";
     document.body.style.paddingRight = "";
     allElements.forEach((el) => {
-        el.style.visibility = "visible";
+      el.style.visibility = "visible";
     });
     fixedElements.forEach((el) => {
       el.style.paddingRight = "";
@@ -110,7 +113,6 @@ window.onload = function () {
         clickable: true,
       },
     });
-    console.log("Swiper initialized!"); // 用於除錯
   } else {
     console.error("Swiper container not found!");
   }
