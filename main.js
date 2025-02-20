@@ -14,11 +14,6 @@ window.onload = function () {
   // preloader (因網站規模小，僅用2秒模擬載入)
   document.body.style.overflow = "hidden";
   document.body.style.paddingRight = `${scrollbarWidth}px`; // 避免頁面跳動
-  //隱藏所有內容
-  allElements.forEach((el) => {
-    el.style.display = "none";
-  });
-
   const fixedElements = document.querySelectorAll(".navbar, .footer");
   fixedElements.forEach((el) => {
     el.style.paddingRight = `${scrollbarWidth}px`;
@@ -29,7 +24,7 @@ window.onload = function () {
     document.body.style.overflow = "";
     document.body.style.paddingRight = "";
     allElements.forEach((el) => {
-      el.style.display = "";
+        el.style.visibility = "visible";
     });
     fixedElements.forEach((el) => {
       el.style.paddingRight = "";

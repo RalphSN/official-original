@@ -1008,3 +1008,7 @@ button {
     transform: translate(0, 160%);
   }
 }
+
+.main, .navbar, .footer {
+  visibility: hidden;
+}
