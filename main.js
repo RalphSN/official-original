@@ -34,9 +34,7 @@ window.onload = function () {
     document.body.style.overflow = "";
     document.body.style.paddingRight = "";
     allElements.forEach((el) => {
-      el.style.display = "flex";
-      el.style.opacity = "1";
-      el.style.transition = "opacity 0.5s ease";
+      el.classList.add("loaded")
     });
     fixedElements.forEach((el) => {
       el.style.paddingRight = "";

@@ -1024,6 +1024,15 @@ button {
 }
 
 .main, .navbar, .footer {
-  display: none;
   opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s; 
+}
+
+.loaded.main, 
+.loaded.navbar, 
+.loaded.footer {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out;
 }
