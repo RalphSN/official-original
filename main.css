@@ -18,7 +18,6 @@ body {
   height: 100%;
   font-family: noto sans tc, sans-serif;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 img {
   max-width: 100%;
@@ -405,8 +404,10 @@ button {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   column-gap: 6rem;
+  cursor: default;
+  pointer-events: none;
 }
-.footer .footer-item .footer-links .footer-link::after {
+/* .footer .footer-item .footer-links .footer-link::after {
   content: "";
   display: block;
   width: 0;
@@ -417,7 +418,7 @@ button {
 .footer .footer-item .footer-links .footer-link:hover::after {
   width: 100%;
   transition: all 0.35s;
-}
+} */
 @media (max-width: 1024px) {
   .footer {
     padding: 2rem 4rem;
@@ -833,7 +834,7 @@ button {
     margin-bottom: 2rem;
   }
   .service .service-dots {
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
   }
   .service .service-item-container {
     display: grid;
